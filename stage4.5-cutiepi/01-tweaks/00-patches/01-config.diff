@@ -1,0 +1,30 @@
+--- a/rootfs/boot/config.txt
++++ b/rootfs/boot/config.txt
+@@ -39,7 +39,6 @@
+ #arm_freq=800
+ 
+ # Uncomment some or all of these to enable the optional hardware interfaces
+-#dtparam=i2c_arm=on
+ #dtparam=i2s=on
+ #dtparam=spi=on
+ 
+@@ -73,6 +72,19 @@
+ # This line should be removed if the legacy DWC2 controller is required
+ # (e.g. for USB device mode) or if USB support is not required.
+ otg_mode=1
++avoid_warnings=2
++
++dtparam=i2c_arm=on
++dtoverlay=cutiepi-panel
++
++enable_uart=1
++dtoverlay=uart1
++dtoverlay=i2c5,pins_10_11
++dtoverlay=mpu6050-i2c5,interrupt=27
++
++start_x=1
++gpu_mem=128
++dtoverlay=ov5647
+ 
+ [all]
+ 

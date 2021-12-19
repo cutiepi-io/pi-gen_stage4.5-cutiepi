@@ -1,0 +1,7 @@
+--- a/rootfs/etc/sysctl.conf
++++ b/rootfs/etc/sysctl.conf
+@@ -66,3 +66,4 @@
+ # for what other values do
+ #kernel.sysrq=438
+ 
++fs.file-max=500000

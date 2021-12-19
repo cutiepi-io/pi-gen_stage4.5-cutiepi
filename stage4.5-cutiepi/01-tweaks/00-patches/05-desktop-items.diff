@@ -1,0 +1,9 @@
+--- a/rootfs/etc/xdg/pcmanfm/LXDE-pi/desktop-items-0.conf
++++ b/rootfs/etc/xdg/pcmanfm/LXDE-pi/desktop-items-0.conf
+@@ -9,5 +9,5 @@
+ show_wm_menu=0
+ sort=mtime;ascending;
+ show_documents=0
+-show_trash=1
++show_trash=0
+ show_mounts=1
