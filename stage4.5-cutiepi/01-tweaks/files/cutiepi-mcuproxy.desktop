@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=cutiepi-mcuproxy
+Comment=CutiePi MCU Proxy
+NoDisplay=true
+Exec=/usr/local/bin/cutiepi-mcuproxy
+NotShowIn=GNOME;KDE;XFCE;

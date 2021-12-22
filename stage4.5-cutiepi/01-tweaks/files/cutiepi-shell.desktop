@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=cutiepi-shell
+Comment=CutiePi Shell
+Exec=/usr/local/bin/cutiepi-shell
+NotShowIn=GNOME;KDE;XFCE;
