@@ -18,9 +18,6 @@ install -m 644 files/cutiepi-mcuproxy.desktop	"${ROOTFS_DIR}/etc/xdg/autostart/"
 install -m 755 files/cutiepi-mcuproxy 		"${ROOTFS_DIR}/usr/local/bin/"
 
 tar xvpf files/cutiepi-shell.tgz -C 		"${ROOTFS_DIR}/opt/"
-tar xvpf files/linux-5.10.74-v8+.tgz -C 	"${ROOTFS_DIR}/lib/modules/"
-
-install -m 644 files/kernel8.img		"${ROOTFS_DIR}/boot/"
 
 tar xvpf files/qml-plugins.tgz -C		"${ROOTFS_DIR}/"
 cp files/*.deb					"${ROOTFS_DIR}/tmp"
@@ -32,14 +29,12 @@ EOF
 rm -f "${ROOTFS_DIR}/tmp/*.deb"
 
 on_chroot <<EOF
-apt-mark hold raspberrypi-bootloader raspberrypi-kernel libqt5virtualkeyboard5
+apt-mark hold libqt5virtualkeyboard5
 EOF
 
 tar xvpf files/rdp-wallpaper-extra.tgz -C	"${ROOTFS_DIR}/"
 
-tar xvpf files/dot-dconf.tgz -C 		"${ROOTFS_DIR}/home/${FIRST_USER_NAME}/"
 on_chroot <<EOF
-chown $FIRST_USER_NAME:$FIRST_USER_NAME -R /home/$FIRST_USER_NAME/.config/
 chown $FIRST_USER_NAME:$FIRST_USER_NAME -R /opt/cutiepi-shell/
 EOF
 
