@@ -1,2 +1,3 @@
-cmst connman neofetch cpufrequtils iio-sensor-proxy 
+connman connman-gtk neofetch cpufrequtils iio-sensor-proxy 
 libqt5serialport5 libqt5multimedia5-plugins qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtgraphicaleffects qml-module-qtmultimedia qml-module-qtquick-controls2 qml-module-qtquick-layouts qml-module-qtquick-localstorage qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qml-module-qtwebengine qml-module-qtquick-virtualkeyboard libqt5hunspellinputmethod5 qtvirtualkeyboard-plugin
+dkms raspberrypi-kernel-headers
