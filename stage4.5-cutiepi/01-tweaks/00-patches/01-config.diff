@@ -8,6 +8,15 @@
  #dtparam=i2s=on
  #dtparam=spi=on
  
+@@ -59,7 +58,7 @@
+ display_auto_detect=1
+ 
+ # Enable DRM VC4 V3D driver
+-dtoverlay=vc4-kms-v3d
++dtoverlay=vc4-kms-v3d,cma-512
+ max_framebuffers=2
+ 
+ # Run in 64-bit mode
 @@ -73,6 +72,19 @@
  # This line should be removed if the legacy DWC2 controller is required
  # (e.g. for USB device mode) or if USB support is not required.
