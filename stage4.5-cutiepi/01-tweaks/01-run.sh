@@ -33,6 +33,8 @@ apt-mark hold libqt5virtualkeyboard5
 EOF
 
 tar xvpf files/panel-config.tgz -C 		"${ROOTFS_DIR}/home/${FIRST_USER_NAME}/"
+tar xvpf files/dconf-config.tgz -C 		"${ROOTFS_DIR}/home/${FIRST_USER_NAME}/"
+
 on_chroot <<EOF
 chown $FIRST_USER_NAME:$FIRST_USER_NAME -R /home/$FIRST_USER_NAME/.config/
 cp /usr/share/applications/connman-gtk.desktop /etc/xdg/autostart/
