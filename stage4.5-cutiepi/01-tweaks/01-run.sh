@@ -40,6 +40,7 @@ chown $FIRST_USER_NAME:$FIRST_USER_NAME -R /home/$FIRST_USER_NAME/.config/
 cp /usr/share/applications/connman-gtk.desktop /etc/xdg/autostart/
 EOF
 
+#tar xvpf files/vc4-dkms.tgz -C			"${ROOTFS_DIR}/"
 tar xvpf files/panel-ilitek-ili9881c-1.0.tgz -C "${ROOTFS_DIR}/"
 on_chroot <<EOF
 dkms add -m panel-ilitek-ili9881c/1.0
@@ -60,3 +61,4 @@ rm -f "${ROOTFS_DIR}/etc/xdg/autostart/piwiz.desktop"
 sed -i 's/console=serial0,115200 //'		"${ROOTFS_DIR}/boot/cmdline.txt"
 sed -i 's/quiet //'				"${ROOTFS_DIR}/boot/cmdline.txt"
 sed -i 's/splash //'				"${ROOTFS_DIR}/boot/cmdline.txt"
+sed -i 's/ignore-serial-consoles/ignore-serial-consoles video=HDMI-A-2:D video=DSI-1:800x1280@60/'	"${ROOTFS_DIR}/boot/cmdline.txt"
