@@ -29,7 +29,7 @@ EOF
 rm -f "${ROOTFS_DIR}/tmp/*.deb"
 
 on_chroot <<EOF
-apt-mark hold libqt5virtualkeyboard5
+apt-mark hold libqt5virtualkeyboard5 qtvirtualkeyboard-plugin
 EOF
 
 tar xvpf files/panel-config.tgz -C 		"${ROOTFS_DIR}/home/${FIRST_USER_NAME}/"
@@ -38,14 +38,6 @@ tar xvpf files/dconf-config.tgz -C 		"${ROOTFS_DIR}/home/${FIRST_USER_NAME}/"
 on_chroot <<EOF
 chown $FIRST_USER_NAME:$FIRST_USER_NAME -R /home/$FIRST_USER_NAME/.config/
 cp /usr/share/applications/connman-gtk.desktop /etc/xdg/autostart/
-EOF
-
-#tar xvpf files/vc4-dkms.tgz -C			"${ROOTFS_DIR}/"
-tar xvpf files/panel-ilitek-ili9881c-1.0.tgz -C "${ROOTFS_DIR}/"
-on_chroot <<EOF
-dkms add -m panel-ilitek-ili9881c/1.0
-dkms build -m panel-ilitek-ili9881c -v 1.0 -k 5.15.30-v8+
-dkms install -m panel-ilitek-ili9881c -v 1.0 -k 5.15.30-v8+
 EOF
 
 tar xvpf files/rdp-wallpaper-extra.tgz -C	"${ROOTFS_DIR}/"
