@@ -1,5 +1,5 @@
 IMG_NAME=raspios-cutiepi
-DEPLOY_ZIP=1 
+DEPLOY_COMPRESSION=xz
 STAGE_LIST="stage0 stage1 stage2 stage3 stage4 stage4.5-cutiepi"
 ENABLE_SSH=1 
 LOCALE_DEFAULT="en_US.UTF-8" 
