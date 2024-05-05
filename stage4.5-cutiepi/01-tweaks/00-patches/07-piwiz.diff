@@ -1,0 +1,80 @@
+--- a/rootfs/usr/share/piwiz/piwiz.ui
++++ b/rootfs/usr/share/piwiz/piwiz.ui
+@@ -321,13 +321,20 @@ Press 'Next' to get started. </property>
+                       </packing>
+                     </child>
+                     <child>
+-                      <object class="GtkComboBox" id="p1comb1">
++                      <object class="GtkScrolledWindow">
+                         <property name="visible">True</property>
+                         <property name="can-focus">False</property>
+-                        <property name="tooltip-text" translatable="yes">Set the country in which you are using your Pi</property>
+-                        <accessibility>
+-                          <relation type="labelled-by" target="p1label10"/>
+-                        </accessibility>
++                        <property name="hscrollbar-policy">never</property>
++                        <child>
++                          <object class="GtkComboBox" id="p1comb1">
++                            <property name="visible">True</property>
++                            <property name="can-focus">False</property>
++                            <property name="tooltip-text" translatable="yes">Set the country in which you are using your Pi</property>
++                            <accessibility>
++                              <relation type="labelled-by" target="p1label10"/>
++                            </accessibility>
++                          </object>
++                        </child>
+                       </object>
+                       <packing>
+                         <property name="expand">False</property>
+@@ -360,13 +367,20 @@ Press 'Next' to get started. </property>
+                       </packing>
+                     </child>
+                     <child>
+-                      <object class="GtkComboBox" id="p1comb2">
++                      <object class="GtkScrolledWindow">
+                         <property name="visible">True</property>
+                         <property name="can-focus">False</property>
+-                        <property name="tooltip-text" translatable="yes">Set the language in which applications should appear</property>
+-                        <accessibility>
+-                          <relation type="labelled-by" target="p1label11"/>
+-                        </accessibility>
++                        <property name="hscrollbar-policy">never</property>
++                        <child>
++                          <object class="GtkComboBox" id="p1comb2">
++                            <property name="visible">True</property>
++                            <property name="can-focus">False</property>
++                            <property name="tooltip-text" translatable="yes">Set the language in which applications should appear</property>
++                            <accessibility>
++                              <relation type="labelled-by" target="p1label11"/>
++                            </accessibility>
++                          </object>
++                        </child>
+                       </object>
+                       <packing>
+                         <property name="expand">False</property>
+@@ -399,13 +413,20 @@ Press 'Next' to get started. </property>
+                       </packing>
+                     </child>
+                     <child>
+-                      <object class="GtkComboBox" id="p1comb3">
++                      <object class="GtkScrolledWindow">
+                         <property name="visible">True</property>
+                         <property name="can-focus">False</property>
+-                        <property name="tooltip-text" translatable="yes">Set the closest city to your location</property>
+-                        <accessibility>
+-                          <relation type="labelled-by" target="p1label12"/>
+-                        </accessibility>
++                        <property name="hscrollbar-policy">never</property>
++                        <child>
++                          <object class="GtkComboBox" id="p1comb3">
++                            <property name="visible">True</property>
++                            <property name="can-focus">False</property>
++                            <property name="tooltip-text" translatable="yes">Set the closest city to your location</property>
++                            <accessibility>
++                              <relation type="labelled-by" target="p1label12"/>
++                            </accessibility>
++                          </object>
++                        </child>
+                       </object>
+                       <packing>
+                         <property name="expand">False</property>

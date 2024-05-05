@@ -1,0 +1,11 @@
+[Unit]
+Description=CutiePi Shell
+After=graphical.target
+ConditionPathExists=!/home/rpi-first-boot-wizard
+
+[Service]
+ExecStart=/usr/local/bin/cutiepi-shell
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
